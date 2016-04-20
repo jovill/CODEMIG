@@ -1,0 +1,122 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="site.master.cs" Inherits="CODEMIG.SiteMaster" %>
+
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+    <head runat="server">
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+
+        <link rel="shortcut icon" href="img/fav.png" type="image/x-icon" />
+        <title>CODEMIG</title>
+
+        <!--FONT AWESOME-->
+            <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+        <!--ANGULAR-->
+            <script src="js/angular.js"></script>
+        <!--JQUERY-->
+            
+            <script src="js/jquery.js" type="text/javascript"></script>
+            <script src="js/jquery-ui.js" type="text/javascript"></script>
+            <link href="css/jquery-ui.css" rel="Stylesheet" type="text/css" />
+            <!--script src="js/jquery.maskedinput.js" type="text/javascript"></script-->
+            <script src="js/jquery.maskMoney.js" type="text/javascript"></script>
+            <script src="js/jQuery-Mask-Plugin-master/src/jquery.mask.js" type="text/javascript"></script>
+        <!--BOOTSTRAP-->
+        <!--<link href=" bootstrap/css/Menucss.css" rel="Stylesheet" type="text/css" />-->
+            <script src="bootstrap/js/bootstrap-select.js" type="text/javascript"></script>
+           <link href=" bootstrap/css/bootstrap.css" rel="Stylesheet" type="text/css" />
+            <link href=" bootstrap/css/bootstrap-select.css" rel="Stylesheet" type="text/css" />
+            <script src="bootstrap/js/bootstrap.js"></script>
+        <!--LOCAL-->
+            <link href="css/stylesheet.css" rel="Stylesheet" type="text/css" />
+
+
+        <asp:ContentPlaceHolder ID="head" runat="server">
+          
+           
+
+        </asp:ContentPlaceHolder>
+       
+    </head>
+
+    <body  >
+
+      
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav">
+                        <li ><a><asp:Label ID="lblSistema" runat="server" Class=""></asp:Label></a></li>
+                        <li ><a><asp:Label ID="lblStatusUser" runat="server" Class=""></asp:Label></a></li>
+                        <li><a runat="server" href="home.aspx" id="linkHome" class="btn  disabled" role="button"><i class="fa fa-home"></i> Inicio</a></li>
+                        
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastro<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a style="text-align:left;" href="empresas.aspx" runat="server" id="linkEmpresa" class="btn disabled"><i class="fa fa-industry"></i>&nbsp;&nbsp;Empresa</a></li>
+                                <li><a style="text-align:left;" runat="server" href="processo.aspx" id="linkProcesso" class="btn  disabled" role="button"><i class="fa fa-folder-open"></i>&nbsp;&nbsp;Processo</a></li>
+                                <li><a style="text-align:left;" href="contrato.aspx" runat="server" id="linkContrato" class="btn  disabled"><i class="fa fa-file-text"></i>&nbsp;&nbsp;Contrato</a></li>
+                                <li><a style="text-align:left;" href="historico.aspx" runat="server" id="linkHistorico" class="btn disabled"><i class="fa fa-th-list"></i>&nbsp;&nbsp;Histórico</a></li>
+                                <li><a style="text-align:left;" href="imovel.aspx" runat="server" id="linkImovel" class="btn disabled"><i class="fa fa-building"></i>&nbsp;&nbsp;Imóvel</a></li>
+                                
+                                 <li><a style="display:none;  text-align:left;" href="adempresa.aspx" runat="server" id="linkADEmpresa" class="btn disabled"><i class="fa fa-refresh"></i>&nbsp;&nbsp;AD Empresa</a></li>
+
+                            </ul>
+                        </li>
+                        <li><a href="paineldecontrole.aspx" runat="server" id="linkCadastro" class="btn disabled"><i class="fa fa-gears"></i> Painel de Controle</a></li>
+                        <li><a href="http://sgp.codemig.com.br/consulta/consulta/?consulta=!#47295924031de8604#abd495347545c58" runat="server" id="linkConsulta" class="btn disabled"><i class="fa fa-database"></i> Consulta</a></li>
+
+                        <li ><a href="logout.aspx" runat="server" id="linkSair" class="btn  disabled" onclick="DataHora()" >Sair</a></li>
+                        
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+        <br />
+
+        <%-- LOGO CODEMIG ---------------------------------------------------------------------------------------------%>
+        <center id="logoC">
+            <img src="img/logo_codemig.gif" alt="CODEMIG" title="CODEMIG" />
+        </center>
+        <%--------------------------------------------------------------------------------------------- LOGO CODEMIG --%>
+        
+        <center style="color:#cccccc;">
+            v1.0.74
+        </center>
+        
+        <br />
+        <br />
+
+        <asp:ContentPlaceHolder ID="body" runat="server">
+
+            <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"/>
+           
+            
+            
+        </asp:ContentPlaceHolder>
+
+      
+        
+          <!--00110101 00110100 00110110 01100110 01100101 01100010 00110110 01100001 00111000 00111001 01100101 01100001 00111001 00110111 00110111 00110101 01100011 00110110 00110110 01100001 01100010 01100011 00110001 00110101 01100100 01100011 00110010 00111001 00110100 01100011 00110011 00110000 -->
+    </body>
+   
+
+</html>
